@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Pacifico|Abril Fatface' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetcia, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: white;
+}
+div {
+  height: 350px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Abril Fatface';
+  text-align: center;
+  font-size: 75px;
+  color: green;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: green;
+  margin: 0px 0 70px 0;
+  font-family: 'Abril Fatface', cursive
+}
+p {
+  color: rgba(255,255,255,0);
+  background: black;
+  background: linear-gradient(bottom, rgba(50,10,20,1), rgba(50,20,10,.4));
+  background: -webkit-linear-gradient(bottom, rgba(50,10,6,1), rgba(50,10,20,.4));
+  background: -moz-linear-gradient(bottom, rgba(50,50,50,1), rgba(40,20,30,.4));
+  padding: 10px;
+  height: 30px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  transition: height .5s;
+  -moz-transition: height .5s;
+  -webkit-transition: height .5s;
+  color: blue;
+  font-family: 'Pacifico';
+  font-size: 20px
+}
+small {
+  opacity: 0;
+}
+.show-description p {
+  height: 150px;
+}
+.show-description small {
+  opacity: 1;
+}
+.price {
+  float: right;
+}
+  ul {
+    padding: 10px;
+    background: rgba(0,0,0,0.5); 
+    text-align: center;
+  }
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+  }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+    color: red
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<ul>
+  <li><button onclick=whatisblueberrypancakes()>blueberry</button></li>
+  <li><button onclick=whatischocolatechippancakes()>chocolate</button></li>
+  <li><button onclick=whatisstrawberrypancakes()>strawberry</button></li>
+</ul>
+<h1>efrain's restaurant</h1>
+<h2>a New York City Pancake house</h2>
+
+<div id="jesus"> </div>
+
+<script>
+
+
+
+blueberryImages= [
+    'url("https://www.henryfields.com/images/800/05491A.jpg")',
+    'url("https://isteam.wsimg.com/neb/obj/NTY2NUY4NUQ2QjVGRTQwREYyREI6NmQ4OGNkZDM3YTFkZWYzODBkNmY3NWZmZjRkYjFmMzY6Ojo6OjA=/:/rs=w:600,h:600")',
+    'url("https://www.lsuagcenter.com/~/media/system/0/7/e/5/07e55a20fb366da92bfdc4e564a158ce/rabbiteye%20blueberryjpg.jpg")',
+]
+chocolateImages= [
+    'url("https://files.meilleurduchef.com/mdc/photo/recipe/tempering-dark-chocolate-traditional/tempering-dark-chocolate-traditional-640.jpg")',
+    'url("https://cdn11.bigcommerce.com/s-gb80281b/images/stencil/original/products/229/699/organic-white-chocolate-bar__57974.1480199425.gif?c=2&imbypass=on")',
+    'url("https://cdn.shopify.com/s/files/1/1115/1664/products/chocolate-chips-chunks-2048.jpg?v=1524249608")',
+    ]
+strawberryImages= [
+    'url("https://cdn.shopify.com/s/files/1/1525/2152/products/albion_690x.jpg?v=1490202822")',
+    'url("https://www.noursefarms.com/uploaded/thumbnails/All%20Star_1140_1000x1000.jpg")',
+    'url("https://cdn10.bigcommerce.com/s-2drwt2az/products/17209/images/42350/51pet15nb7l__84593.1493246390.1280.1280.jpg?c=2")',
+    ]
+    
+function whatisblueberrypancakes() {
+  stepping	= document.getElementById("jesus")
+  stepping.innerHTML = ''
+  stepping.innerHTML += blueberryDivs[0]
+  stepping.innerHTML += blueberryDivs[1]
+  stepping.innerHTML += blueberryDivs[2]
+  //alert("you got the blues")
+  items = document.getElementsByClassName("item")
+    items[0].style.background = blueberryImages[0]
+    items[0].style.backgroundSize ='100% 100%'
+    items[1].style.background = blueberryImages[1]
+    items[2].style.background = blueberryImages[2]
+    items[2].style.backgroundSize ='100% 100%'
+
+}
+function whatischocolatechippancakes() {
+  stepping	= document.getElementById("jesus")
+  stepping.innerHTML = ''
+  stepping.innerHTML += chocolateDivs[0]
+  stepping.innerHTML += chocolateDivs[1]
+  stepping.innerHTML += chocolateDivs[2]
+  //alert("you got yourself some chocolate")
+  items = document.getElementsByClassName("item")
+    items[0].style.background = chocolateImages[0]
+    items[1].style.background = chocolateImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = chocolateImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+   
+}
+function whatisstrawberrypancakes() {
+  stepping	= document.getElementById("jesus")
+  stepping.innerHTML = ''
+  stepping.innerHTML += strawberryDivs[0]
+  stepping.innerHTML += strawberryDivs[1]
+  stepping.innerHTML += strawberryDivs[2]
+  //stepping.style.color = 'red'
+  //alert("you got some of that fruit of love")
+  items = document.getElementsByClassName("item")
+    items[0].style.background = strawberryImages[0]
+    items[1].style.background = strawberryImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = strawberryImages[2]
+}
+  $('div').on('click', function() {
+    $(this).toggleClass('show-description');
+  });
+blueberryDivs = [
+  '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+]
+chocolateDivs = [
+  '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+]
+strawberryDivs = [
+  '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+]
+</script>
+</script>
+</script>
+
+</body>
