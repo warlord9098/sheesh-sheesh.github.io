@@ -103,6 +103,7 @@ small {
   <li><button onclick=whatisblueberrypancakes()>blueberry</button></li>
   <li><button onclick=whatischocolatechippancakes()>chocolate</button></li>
   <li><button onclick=whatisstrawberrypancakes()>strawberry</button></li>
+  <li><button onclick=whatissrestaurant()>strawberry</button></li>
 </ul>
 <h1>efrain's restaurant</h1>
 <h2>a New York City Pancake house</h2>
@@ -111,23 +112,41 @@ small {
 
 <script>
 
-
+restaurantImages= [  
+'url("https://www.een.com/wp-content/uploads/2018/05/IHOP-FI.jpg")',
+'url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/international-house-of-pancakes-ihop-restaurant-royalty-free-image-458584079-1539705870.jpg")',
+]
 
 blueberryImages= [
-    'url("https://www.henryfields.com/images/800/05491A.jpg")',
+'url("https://www.henryfields.com/images/800/05491A.jpg")',
     'url("https://isteam.wsimg.com/neb/obj/NTY2NUY4NUQ2QjVGRTQwREYyREI6NmQ4OGNkZDM3YTFkZWYzODBkNmY3NWZmZjRkYjFmMzY6Ojo6OjA=/:/rs=w:600,h:600")',
     'url("https://www.lsuagcenter.com/~/media/system/0/7/e/5/07e55a20fb366da92bfdc4e564a158ce/rabbiteye%20blueberryjpg.jpg")',
+'url("https://www.blueberrycouncil.org/wp-content/uploads/3.9.15_CIA-5593.jpg")',
 ]
 chocolateImages= [
     'url("https://files.meilleurduchef.com/mdc/photo/recipe/tempering-dark-chocolate-traditional/tempering-dark-chocolate-traditional-640.jpg")',
     'url("https://cdn11.bigcommerce.com/s-gb80281b/images/stencil/original/products/229/699/organic-white-chocolate-bar__57974.1480199425.gif?c=2&imbypass=on")',
     'url("https://cdn.shopify.com/s/files/1/1115/1664/products/chocolate-chips-chunks-2048.jpg?v=1524249608")',
-    ]
+'url("https://images-na.ssl-images-amazon.com/images/G/01/aplus/detail-page/B002RBOCD6_excellence_chef.jpg")',
+]
 strawberryImages= [
-    'url("https://cdn.shopify.com/s/files/1/1525/2152/products/albion_690x.jpg?v=1490202822")',
-    'url("https://www.noursefarms.com/uploaded/thumbnails/All%20Star_1140_1000x1000.jpg")',
+'url("https://cdn.shopify.com/s/files/1/1525/2152/products/albion_690x.jpg?v=1490202822")',
+'url("https://www.noursefarms.com/uploaded/thumbnails/All%20Star_1140_1000x1000.jpg")',
     'url("https://cdn10.bigcommerce.com/s-2drwt2az/products/17209/images/42350/51pet15nb7l__84593.1493246390.1280.1280.jpg?c=2")',
-    ]
+'url("https://c8.alamy.com/comp/G6RKRE/chef-decorates-dessert-cake-with-strawberry-in-kitchen-G6RKRE.jpg")'
+]
+function whatissrestaurant() {
+  stepping	= document.getElementById("jesus")
+  stepping.innerHTML = ''
+  stepping.innerHTML += restaurantDivs[0]
+  stepping.innerHTML += restaurantDivs[1]
+  //alert("the crib JUUU HURD")
+  items = document.getElementsByClassName("item")
+    items[0].style.background = restaurantImages[0]
+	items[0].style.backgroundSize ='100% 100%'
+	items[1].style.background = restaurantImages[1]
+	items[1].style.backgroundSize ='100% 100%'
+  }  
     
 function whatisblueberrypancakes() {
   stepping	= document.getElementById("jesus")
@@ -135,6 +154,7 @@ function whatisblueberrypancakes() {
   stepping.innerHTML += blueberryDivs[0]
   stepping.innerHTML += blueberryDivs[1]
   stepping.innerHTML += blueberryDivs[2]
+  stepping.innerHTML += blueberryDivs[3]
   //alert("you got the blues")
   items = document.getElementsByClassName("item")
     items[0].style.background = blueberryImages[0]
@@ -142,6 +162,8 @@ function whatisblueberrypancakes() {
     items[1].style.background = blueberryImages[1]
     items[2].style.background = blueberryImages[2]
     items[2].style.backgroundSize ='100% 100%'
+	items[3].style.background = blueberryImages[3]
+	items[3].style.backgroundSize ='100% 100%'
 
 }
 function whatischocolatechippancakes() {
@@ -150,6 +172,7 @@ function whatischocolatechippancakes() {
   stepping.innerHTML += chocolateDivs[0]
   stepping.innerHTML += chocolateDivs[1]
   stepping.innerHTML += chocolateDivs[2]
+  stepping.innerHTML += chocolateDivs[3]
   //alert("you got yourself some chocolate")
   items = document.getElementsByClassName("item")
     items[0].style.background = chocolateImages[0]
@@ -157,6 +180,8 @@ function whatischocolatechippancakes() {
     items[1].style.backgroundSize = '100% 100%'
     items[2].style.background = chocolateImages[2]
     items[2].style.backgroundSize = '100% 100%'
+	items[3].style.background = chocolateImages[3]
+    items[3].style.backgroundSize ='100% 100%'
    
 }
 function whatisstrawberrypancakes() {
@@ -165,6 +190,7 @@ function whatisstrawberrypancakes() {
   stepping.innerHTML += strawberryDivs[0]
   stepping.innerHTML += strawberryDivs[1]
   stepping.innerHTML += strawberryDivs[2]
+  stepping.innerHTML += strawberryDivs[3]
   //stepping.style.color = 'red'
   //alert("you got some of that fruit of love")
   items = document.getElementsByClassName("item")
@@ -172,6 +198,9 @@ function whatisstrawberrypancakes() {
     items[1].style.background = strawberryImages[1]
     items[1].style.backgroundSize = '100% 100%'
     items[2].style.background = strawberryImages[2]
+	items[3].style.background = strawberryImages[3]
+	items[3].style.backgroundSize ='100% 100%'
+	
 }
   $('div').on('click', function() {
     $(this).toggleClass('show-description');
@@ -180,16 +209,23 @@ blueberryDivs = [
   '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>blueberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+   '<div class="item"><p>blueberry chef.0<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
 ]
 chocolateDivs = [
   '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>chocolate pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+   '<div class="item"><p>chocolate chef<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+]
+restaurantDivs = [
+  '<div class="item"><p>restaurant<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+  '<div class="item"><p>restaurant<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
 ]
 strawberryDivs = [
   '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
   '<div class="item"><p>strawberry pancakes<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
+   '<div class="item"><p>strawberry chef<span class="price">$54</span><br /><small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p></div>',
 ]
 </script>
 
